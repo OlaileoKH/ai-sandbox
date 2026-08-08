@@ -1,45 +1,45 @@
 # 🎛️ AI Engineering Parameter Sandbox
 
-An interactive command-line interface (CLI) sandbox designed to test and experiment with AI generation parameters (`temperature` and `top_p`) locally using Ollama and the Llama 3.2 (3B) model.
+An interactive web application designed to test and experiment with AI generation parameters (`temperature` and `top_p`) in real-time using Ollama and the Llama 3.2 (3B) model.
 
 ## 🚀 Features
-* **Interactive Parameter Tuning:** Test how different temperature (0.0 - 2.0) and top_p (0.0 - 1.0) values alter AI creativity and focus.
-* **Local Processing:** Runs entirely on your machine using Ollama for total data privacy.
-* **Error Resilience:** Gracefully catches connection errors if the local server isn't running.
+* **Interactive UI:** Built entirely with Streamlit, featuring sleek sliders and wide text areas.
+* **Parameter Tuning:** Instantly visualize how changing temperature (0.0 - 2.0) and top_p (0.0 - 1.0) shifts AI focus and creativity.
+* **Local Processing:** Queries your local Ollama setup for zero-latency testing and complete privacy.
 
 ## 🛠️ Prerequisites
 
-Before running the sandbox, you must have the following installed:
+Before launching the web app, ensure you have the following installed on your local computer:
 1. **Python 3.8+**
 2. **Ollama** (Download from [ollama.com](https://ollama.com))
 
-### Setup Ollama
-Make sure the Llama 3.2 model is pulled and running locally:
+### Set Up Ollama
+Make sure your local background model is running:
 ```bash
-# Pull the required model
+# Download the Llama 3.2 model
 ollama pull llama3.2:3b
 
-# Ensure the Ollama server is active
+# Start the Ollama local engine
 ollama serve
 ```
 
 ## 💻 Installation & Setup
 
-1. **Clone or download** this repository to your local machine.
-2. Navigate into the project directory:
+1. **Clone or download** this repository to your machine.
+2. Navigate directly into the project directory:
    ```bash
    cd ai-sandbox
    ```
-3. Install the required dependencies using the `requirements.txt` file:
+3. Install the web server and connection packages using the updated requirements file:
    ```bash
    pip install -r requirements.txt
    ```
 
 ## 🎮 How to Run
 
-Execute the main script to launch the interactive terminal hub:
+Launch the local interactive Streamlit server using your terminal:
 ```bash
-python main.py
+streamlit run app.py
 ```
 
-Follow the on-screen prompts to input your system instructions, user queries, and parameter metrics to see the local AI engine compile your response.
+Your web browser will automatically launch a new window at `http://localhost:8501`. Feed your custom system prompt instructions, adjust the precision sliders, and hit **Run AI Engine** to view your output!
